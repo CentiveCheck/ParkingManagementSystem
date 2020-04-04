@@ -18,9 +18,10 @@ public class ParkingSpaceManager {
 
 		if (FOUR_WHEELER.equalsIgnoreCase(vehicle.getType())) {
 			if (ParkingSlot.FOUR_WHEELER_SLOTS_COUNT <= ParkingSpace.TOTAL_FOUR_WHEELER_SLOTS) {
+
 				parkingSlotMap.put(vehicle.getLicenseNumber(), ++ParkingSlot.FOUR_WHEELER_SLOTS_COUNT);
 				parkingSpace.setParkingMap(parkingSlotMap);
-				System.out.println("Vehicle:" + vehicle.getLicenseNumber() + " is allocated slot number:"
+				System.out.println("Vehicle:" + vehicle.getLicenseNumber() + " is allocated four wheeler slot number:"
 						+ ParkingSlot.FOUR_WHEELER_SLOTS_COUNT);
 			}
 
@@ -28,9 +29,8 @@ public class ParkingSpaceManager {
 		if (TWO_WHEELER.equalsIgnoreCase(vehicle.getType())) {
 			if (ParkingSlot.TWO_WHEELER_SLOTS_COUNT <= ParkingSpace.TOTAL_TWO_WHEELER_SLOTS) {
 				parkingSlotMap.put(vehicle.getLicenseNumber(), ++ParkingSlot.TWO_WHEELER_SLOTS_COUNT);
-
 				parkingSpace.setParkingMap(parkingSlotMap);
-				System.out.println("Vehicle:" + vehicle.getLicenseNumber() + "is allocated slot:"
+				System.out.println("Vehicle:" + vehicle.getLicenseNumber() + "is allocated Two wheeler slot:"
 						+ ParkingSlot.TWO_WHEELER_SLOTS_COUNT);
 			}
 
